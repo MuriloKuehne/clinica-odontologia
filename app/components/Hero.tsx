@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { clinicConfig } from '@/lib/clinic-config';
+import { SECTION_SPACING, TYPOGRAPHY } from '@/lib/constants';
+import { cn } from '@/lib/utils/cn';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,9 +28,10 @@ const Hero = () => {
         {clinicConfig.heroSpecialties.map((specialty, index) => (
           <div
             key={specialty.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={cn(
+              'absolute inset-0 transition-opacity duration-1000',
               index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
+            )}
           >
             <Image
               src={specialty.imageUrl}
@@ -44,20 +47,20 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light italic mb-6 animate-fade-in">
+      <div className={cn('relative z-10 container mx-auto', SECTION_SPACING.CONTAINER_PX_RESPONSIVE, 'text-center text-white')}>
+        <h1 className={cn(TYPOGRAPHY.HEADING.H1, SECTION_SPACING.MARGIN_BOTTOM.HEADING)}>
           {clinicConfig.name}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl mb-4 text-gray-100">
+        <p className={cn(TYPOGRAPHY.BODY.LARGE, 'sm:text-2xl md:text-3xl', SECTION_SPACING.MARGIN_BOTTOM.HEADING, TYPOGRAPHY.COLOR.LIGHT)}>
           {clinicConfig.tagline}
         </p>
-        <p className="text-xl sm:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
+        <p className={cn(TYPOGRAPHY.BODY.LARGE, 'sm:text-2xl mb-8 text-gray-200 max-w-content mx-auto')}>
           {clinicConfig.heroSpecialties[currentSlide].description}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className={cn('flex flex-col sm:flex-row', SECTION_SPACING.GAP.SM, 'justify-center')}>
           <a
             href="#contact"
-            className="bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg"
+            className="bg-straw-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-straw-600 transition-colors shadow-lg"
           >
             Agendar Consulta
           </a>
@@ -76,9 +79,10 @@ const Hero = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-2 rounded-full transition-all ${
+              className={cn(
+                'h-2 rounded-full transition-all',
                 index === currentSlide ? 'w-8 bg-white' : 'w-2 bg-white/50'
-              }`}
+              )}
               aria-label={`Ir para slide ${index + 1}`}
             />
         ))}

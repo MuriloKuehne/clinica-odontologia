@@ -1,8 +1,23 @@
+export interface BusinessHours {
+  weekdays: string;
+  saturday?: string;
+  sunday?: string;
+}
+
+export interface TransportationInfo {
+  car: string;
+  publicTransport: string;
+  accessibility: string;
+}
+
 export interface ContactInfo {
   phone: string;
+  whatsapp?: string;
   email: string;
   address: string;
   googleMapsEmbedUrl: string;
+  businessHours: BusinessHours;
+  transportation: TransportationInfo;
 }
 
 export interface Specialty {

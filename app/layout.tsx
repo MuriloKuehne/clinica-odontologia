@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
-import { Newsreader } from 'next/font/google';
+import { Poppins, Open_Sans } from 'next/font/google';
 import './globals.css';
 import { clinicConfig } from '@/lib/clinic-config';
 
-const newsreader = Newsreader({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400'],
-  style: ['normal', 'italic'],
-  variable: '--font-newsreader',
+  weight: ['500', '700'],
+  variable: '--font-poppins',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-open-sans',
 });
 
 export const metadata: Metadata = {
@@ -27,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={`${newsreader.className} font-normal`}>{children}</body>
+    <html lang="pt-BR" className={`${poppins.variable} ${openSans.variable}`}>
+      <body className={`${openSans.className} font-normal`}>{children}</body>
     </html>
   );
 }

@@ -1,22 +1,24 @@
 import Image from 'next/image';
 import { clinicConfig } from '@/lib/clinic-config';
+import { SECTION_SPACING, TYPOGRAPHY } from '@/lib/constants';
+import { cn } from '@/lib/utils/cn';
 
 const Specialties = () => {
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className={cn(SECTION_SPACING.PY, 'bg-gray-50')}>
+      <div className={cn('container mx-auto', SECTION_SPACING.CONTAINER_PX_RESPONSIVE)}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light italic text-gray-900 mb-4">
+          <div className={cn('text-center', SECTION_SPACING.MARGIN_BOTTOM.SECTION)}>
+            <h2 className={cn(TYPOGRAPHY.HEADING.H2, 'text-straw-700', SECTION_SPACING.MARGIN_BOTTOM.HEADING)}>
               Nossos Serviços
             </h2>
-            <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+            <p className={cn(TYPOGRAPHY.COLOR.TERTIARY, TYPOGRAPHY.BODY.LARGE, 'max-w-2xl mx-auto')}>
               Cuidado odontológico completo adaptado às suas necessidades
             </p>
-            <div className="w-24 h-1 bg-primary-600 mx-auto mt-4" />
+            <div className="w-24 h-1 bg-straw-500 mx-auto mt-4" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className={cn('grid sm:grid-cols-2 lg:grid-cols-3', SECTION_SPACING.GAP.SM)}>
             {clinicConfig.specialties.map((specialty) => (
               <div
                 key={specialty.id}
@@ -32,10 +34,10 @@ const Specialties = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className={cn(TYPOGRAPHY.HEADING.H4, 'text-straw-700', 'mb-3')}>
                     {specialty.name}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed text-lg">
+                  <p className={cn(TYPOGRAPHY.COLOR.SECONDARY, 'leading-relaxed', TYPOGRAPHY.BODY.BASE)}>
                     {specialty.description}
                   </p>
                 </div>

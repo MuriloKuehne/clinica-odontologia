@@ -1,0 +1,7 @@
+- Hernani Jr → Responsável Técnico pela “Clínica Dr. Hernani Jr”. Fazer temático pois a clínica completa 30 anos (de trabalhos ininterruptos em Machado).
+- Neife Miguel → Trabalha com o Hernani há 10 anos. Especialista em Endodontia (tratamento de canal) há 30 anos. Especialista em Ortopedia dos Maxilares há 22 anos.
+- Zuleica → Cirurgiã Dentista (trabalha com ele há 20 anos). Começou com Odontopediatria e especializou em Ortodontia também.
+- Gabriela Souza → Cirurgiã Dentista, atua como Clínico Geral e Estética com Ênfase em Clareamento Dental.
+- Marcela → Dentista que atua como clínico Geral e Estética Dental. Atende crianças também.
+- André Carole → Cirurgião Dentista, especialista em cirurgia bucomaxilarfacial, estomatologia e implantodentia, vem para participar de tratamentos de casos cirúrgicos mais complexos pois mora em São Paulo e trabalha no hospital das clínicas da faculdade de medicina da USP e no hospital acecamarco.
+- Fábia Ribeiro → Nutricionista (trabalha na clínica há quase 15 anos), formada há 20 anos e tem mestrado em longevidade. Várias especializações como Nutrição de Precisão entre outras.
